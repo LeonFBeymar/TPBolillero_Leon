@@ -1,13 +1,21 @@
 ﻿using System.Collections.Generic;
+using System;
 namespace tpbolillero.core
 {
-    public class Bolillero
+    public class Bolillero : ICloneable
     {
         public List<byte> Adentro { get; set; }
         public List<byte> Afuera { get; set; }
         public IAzar Azar { get; set; }
         public Bolillero() { }
         public Bolillero(byte bolillas) => Crearbolillas(bolillas);
+        
+        private Bolillero(Bolillero Original)
+        {
+            Adentro = new List<byte>(Original.Adentro);
+            Afuera = new List<byte>(Original.Afuera);
+
+        }
         private void Crearbolillas(byte numero)
         {
             Adentro = new List<byte>();
@@ -30,10 +38,10 @@ namespace tpbolillero.core
             return bolilla;
         }
         public bool Jugar(List<byte> jugada) => jugada.TrueForAll(j => j == SacarBolilla());
-        public long JugarN(List<byte> bolillas,long cantidad)
+        public long JugarN(List<byte> bolillas, long cantidad)
         {
             long contador = 0;
-            for ( int i = 0;i < cantidad; i++)
+            for (int i = 0; i < cantidad; i++)
             {
                 Reingresar();
 
@@ -43,6 +51,12 @@ namespace tpbolillero.core
                 }
             }
             return contador;
+        }
+
+
+        public object Clone()
+        {
+            return new Bolillero(this);
         }
     }
 }
