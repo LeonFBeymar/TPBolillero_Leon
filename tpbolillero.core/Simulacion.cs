@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace tpbolillero.core
 {
@@ -17,9 +18,16 @@ namespace tpbolillero.core
             Task<long>[] tareas = new Task<long>[cantidadHilos];
             for (int i = 0; i < cantidad; i++)
             {
+                Bolillero bolilleroClon = (Bolillero)bolillero.Clone(); 
+                tareas[i] = Task<long>.Run(()=> simularSinHilos(bolilleroClon, jugada, cantidad));
+                var a = cantidad / cantidadHilos;
+
+
+                Task<long>.WaitAll(tareas);
                 
-                bolillero.Clone();
+                return tareas.Sum();
             }
+            
         }
     }
 }
