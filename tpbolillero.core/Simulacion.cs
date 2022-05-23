@@ -27,19 +27,9 @@ namespace tpbolillero.core
                     Bolillero bolilleroClon = (Bolillero)bolillero.Clone();
                     tareas[i] = Task<long>.Run(()=> simularSinHilos(bolilleroClon, jugada, cantidadSimulaciones));
                 }
-                
             }
             Task<long>.WaitAll(tareas);
             return tareas.Sum(x => x.Result);
         }
     }
 }
-
-
-// sumadeGanadas = sumadeGanadas + tareas.Sum(x => i);
-//CLonamos el bolillero y se lo asignamos  a un objeto de tipo Bolillero return sumadeGanadas;  long sumadeGanadas = 0;
-
-//                     Bolillero bolilleroClon = (Bolillero)bolillero.Clone();
-//                     //Asignamos a cada tarea su propia simulacion con su propio bolillero
-//                     tareas[i] = Task<long>.Run(()=> simularSinHilos(bolilleroClon, jugada, cantidadSimulaciones));
-//                     //La coleccion tareas en el idice N ya tiene la cantidad de veces que salieron verdaderas las jugadas.
