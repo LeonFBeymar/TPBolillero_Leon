@@ -18,7 +18,7 @@ namespace tpbolillero.core
             long SimulacionesPorHilo = cantidadSimulaciones / cantidadHilos;
 
             Task<long>[] tareas = new Task<long>[cantidadHilos];
-           
+            
             for (long i = 0; i < cantidadHilos; i++)
             {
                 
@@ -30,7 +30,7 @@ namespace tpbolillero.core
                 
             }
             Task<long>.WaitAll(tareas);
-            
+            return tareas.Sum(x => x.Result);
         }
     }
 }
