@@ -11,9 +11,9 @@
 
 **Asignatura**: Programacion Sobre Redes
 
-**Nombre TP**: Bolillero
+**Nombre TP**: Bolillero Async y Await
 
-**Apellido y nombre Alumno**: Leon Flores BeymaR
+**Apellido y nombre Alumno**: Leon Flores Beymar
 
 **Curso**: 6to 7ma
 
@@ -22,7 +22,7 @@
 Clonar el repositorio github, desde Github Desktop o ejecutar en la terminal o CMD:
 
 ```
-git clone https://github.com/LeonFBeymar/TPBolillero_Leon
+git clone https://github.com/LeonFBeymar/TPBolillero_Leon/tree/TareasAsync
 ```
 
 ### Pre-requisitos 📋
