@@ -13,7 +13,7 @@
 
 **Nombre TP**: Bolillero
 
-**Apellido y nombre Alumno**: Leon Flores BeymaR
+**Apellido y nombre Alumno**: Leon Flores Beymar
 
 **Curso**: 6to 7ma
 
@@ -39,7 +39,7 @@ _Agrega notas adicionales sobre que cosas se debe instalar, configurar y como ha
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/LeonFBeymar/TPBolillero_Leon/tags).
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio]https://github.com/LeonFBeymar/TPBolillero_Leon/tree/ParallelAsync.
 
 ## Autores ✒️
 
